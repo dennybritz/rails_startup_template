@@ -7,8 +7,10 @@ gem "analytics-ruby"
 gem "bcrypt-ruby"
 # Useful SASS mixins (http://bourbon.io/)
 gem "bourbon"
+
 # HAML templating language (http://haml.info)
-gem "haml-rails"
+gem "haml-rails" if yes?("Use HAML instead of ERB?")
+
 # Simple form builder (https://github.com/plataformatec/simple_form)
 gem "simple_form"
 # To generate UUIDs, useful for various things
@@ -50,10 +52,9 @@ run "mv app/assets/stylesheets/application.css app/assets/stylesheets/applicatio
 # It's better design to import or require things manually.
 run "sed -i '' /require_tree/d app/assets/javascripts/application.js"
 run "sed -i '' /require_tree/d app/assets/stylesheets/application.css.scss"
-# Add bourbon and font-awesome to stylesheet file
+# Add bourbon to stylesheet file
 run "echo >> app/assets/stylesheets/application.css.scss"
 run "echo '@import \"bourbon\";' >>  app/assets/stylesheets/application.css.scss"
-
 
 
 
