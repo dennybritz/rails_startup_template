@@ -14,7 +14,7 @@ rails new [app_name] -m rails_startup_template/template.rb
   - [analytics-ruby](https://github.com/segmentio/analytics-ruby): I use [segment.io](https://segment.io/rpair-production/dashboard) as an anaytics provider. Segment.io is easy to integrate, asynchronous, and forwards data to other providers like Mixpanel and Kissmetrics.
   - bcrypt-ruby: I usually implement authentication myself instead of using gems like Devise. This is needed for the `has_secure_password` functionality. [See API Doc](http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html).
   - [bourbon](http://bourbon.io/): Bourbon provides useful SASS mixins for cross-browser compatibility.
-  - [haml-rails](http://haml.info): HAML is a beautiful templating language. I prefer it over ERB. 
+  - (Optional) [haml-rails](http://haml.info): HAML is a beautiful templating language. I prefer it over ERB. 
   - [simple_form]((https://github.com/plataformatec/simple_form): SimpleForm makes it easy to build complex form using simple markup.
   - uuidtools: To generate UUIDs, which is useful for various things.
   - [rspec-rails]((https://github.com/rspec/rspec-rails): Rspec is a testing tool for test-driven and behavior-driven development. It makes writing specs more enjoyable.
