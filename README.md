@@ -18,6 +18,7 @@ rails new [app_name] -m rails_startup_template/template.rb
   - [simple_form]((https://github.com/plataformatec/simple_form): SimpleForm makes it easy to build complex form using simple markup.
   - uuidtools: To generate UUIDs, which is useful for various things.
   - [rspec-rails]((https://github.com/rspec/rspec-rails): Rspec is a testing tool for test-driven and behavior-driven development. It makes writing specs more enjoyable.
+  - [guard-rspec](https://github.com/guard/guard-rspec): Guard for automatically launching your specs when files are modified.
   - (test environment) [capybara]((https://github.com/jnicklas/capybara): I use Capybara to write integration tests and simulate user behavior.
   - (test environment) [factory_girl_rails]((https://github.com/thoughtbot/factory_girl): FactoryGirl provdes a flexible alternative to Rails fixtures. 
   - (production environment) [rails_12factor]((https://devcenter.heroku.com/articles/rails-integration-gems): This is needed for deploying Rails 4 applications on [Heroku](http://heroku.com). 

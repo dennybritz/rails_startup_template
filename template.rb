@@ -16,8 +16,13 @@ gem "simple_form"
 # To generate UUIDs, useful for various things
 gem "uuidtools"
 
-# Rspec for tests (https://github.com/rspec/rspec-rails)
-gem "rspec-rails"
+gem_group :development do
+  # Rspec for tests (https://github.com/rspec/rspec-rails)
+  gem "rspec-rails"
+  # Guard for automatically launching your specs when files are modified. (https://github.com/guard/guard-rspec)
+  gem "guard-rspec"
+end
+
 gem_group :test do
   # Capybara for integration testing (https://github.com/jnicklas/capybara)
   gem "capybara" 
@@ -41,6 +46,10 @@ run "echo PORT=3000 >> .env"
 run "echo '.env' >> .gitignore"
 # We need this with foreman to see log output immediately
 run "echo 'STDOUT.sync = true' >> config/environments/development.rb"
+
+# ==================================================
+# Initialize guard
+run "bundle exec guard init rspec"
 
 
 
