@@ -11,7 +11,7 @@ rails new [app_name] -m rails_startup_template/template.rb
 ## What it does
 
 1. Adds the following gems:
-  - [analytics-ruby](https://github.com/segmentio/analytics-ruby): I use [segment.io](https://segment.io/rpair-production/dashboard) as an anaytics provider. Segment.io is easy to integrate, asynchronous, and forwards data to other providers like Mixpanel and Kissmetrics.
+  - [analytics-ruby](https://github.com/segmentio/analytics-ruby): I use [segment.io](https://segment.io/) as an anaytics provider. Segment.io is easy to integrate, asynchronous, and forwards data to other providers like Mixpanel and Kissmetrics.
   - bcrypt-ruby: I usually implement authentication myself instead of using gems like Devise. This is needed for the `has_secure_password` functionality. [See API Doc](http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html).
   - [bourbon](http://bourbon.io/): Bourbon provides useful SASS mixins for cross-browser compatibility.
   - (Optional) [haml-rails](http://haml.info): HAML is a beautiful templating language. I prefer it over ERB. 
