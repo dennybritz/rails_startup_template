@@ -22,7 +22,7 @@ rails new [app_name] -m rails_startup_template/template.rb
   - (test environment) [factory_girl_rails]((https://github.com/thoughtbot/factory_girl): FactoryGirl instead of Rails fixtures 
   - (production environment) [rails_12factor]((https://devcenter.heroku.com/articles/rails-integration-gems): For deploying Rails 4 applications on heroku 
 
-2. Sets up [foreman](https://github.com/ddollar/foreman) to deal with environment variables and background services.
+2. Sets up [foreman](https://github.com/ddollar/foreman) to deal with environment variables and background services. Instead of using `rails s` you should use `foreman s`.
 
 3. Cleans up assets by renaming `application.css` to `application.css.scss` and removing the `include_tree` directives. It's better design to import and require things manually. For example, `@import 'bootstrap';`
 
