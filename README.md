@@ -20,7 +20,7 @@ rails new [app_name] -m rails_startup_template/template.rb
   - [rspec-rails]((https://github.com/rspec/rspec-rails): Rspec is a testing tool for test-driven and behavior-driven development. It makes writing specs more enjoyable.
   - (test environment) [capybara]((https://github.com/jnicklas/capybara): I use Capybara to write integration tests and simulate user behavior.
   - (test environment) [factory_girl_rails]((https://github.com/thoughtbot/factory_girl): FactoryGirl provdes a flexible alternative to Rails fixtures. 
-  - (production environment) [rails_12factor]((https://devcenter.heroku.com/articles/rails-integration-gems): This is needed for deploying Rails 4 applications on Heroku(http://heroku.com). 
+  - (production environment) [rails_12factor]((https://devcenter.heroku.com/articles/rails-integration-gems): This is needed for deploying Rails 4 applications on [Heroku](http://heroku.com). 
 
 2. Sets up [foreman](https://github.com/ddollar/foreman) to deal with environment variables and background services. Instead of using `rails s` you should use `foreman s`. Add your own environment variables in the `.env` file.
 
