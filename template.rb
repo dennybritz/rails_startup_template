@@ -95,6 +95,11 @@ if yes?("Download font-awesome?")
   run "echo '@import \"font-awesome\";' >>  app/assets/stylesheets/application.css.scss"
 end
 
+
+# DS_Store gets added to project if viewed in OSX Finder
+run "echo '.DS_Store' >> .gitignore"
+
+
 # Git: Initialize
 # ==================================================
 git :init
