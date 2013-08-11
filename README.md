@@ -1,6 +1,6 @@
 # Rails Startup template
 
-This is a template I use for my new Ruby on Rails 4 applications.
+This is a template I use for my new Ruby on Rails 4 applications. **Pull requests are welcome.**
 
 ## How to Use
 
