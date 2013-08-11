@@ -47,8 +47,11 @@ run "echo '.env' >> .gitignore"
 # We need this with foreman to see log output immediately
 run "echo 'STDOUT.sync = true' >> config/environments/development.rb"
 
-# ==================================================
+
+
 # Initialize guard
+# ==================================================
+
 run "bundle exec guard init rspec"
 
 
