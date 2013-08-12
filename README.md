@@ -33,8 +33,10 @@ rails new [app_name] -m rails_startup_template/template.rb
 
 6. Initializes a new git repository with an initial commit.
 
+7. Optionally create a github repository.
+
 ## TODO
 
 Here are some things I'd like to add:
 
-- Optionally create a github repository. That sould be done by asking for username/password and issuing a curl API call.
+- Optionally create a sample app.
