@@ -16,11 +16,16 @@ gem "simple_form"
 # To generate UUIDs, useful for various things
 gem "uuidtools"
 
+github = false
 gem_group :development do
   # Rspec for tests (https://github.com/rspec/rspec-rails)
   gem "rspec-rails"
   # Guard for automatically launching your specs when files are modified. (https://github.com/guard/guard-rspec)
   gem "guard-rspec"
+  if yes?("Initialize Github repository?")
+    github = true
+    gem "hub"
+  end
 end
 
 gem_group :test do
@@ -106,3 +111,14 @@ git :init
 git add: "."
 git commit: %Q{ -m 'Initial commit' }
 
+if github
+  say "Creating GitHub repository..."
+  git_uri = `git config remote.origin.url`.strip
+  unless git_uri.size == 0
+    say "Repository already exists:"
+    say "#{git_uri}"
+  else
+    run "hub create #{app_name}"
+    run "hub push -u origin master"
+  end
+end
