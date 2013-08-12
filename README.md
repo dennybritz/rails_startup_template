@@ -39,4 +39,4 @@ rails new [app_name] -m rails_startup_template/template.rb
 
 Here are some things I'd like to add:
 
-- Optionally create a sample app.
+- Add Heroku-specific gems inside a question group, "Are you using Heroku?"
