@@ -1,7 +1,7 @@
 # Gems
 # ==================================================
 
-# Segment.io as an anaytics solution (https://github.com/segmentio/analytics-ruby)
+# Segment.io as an analytics solution (https://github.com/segmentio/analytics-ruby)
 gem "analytics-ruby"
 # For encrypted password
 gem "bcrypt-ruby"
@@ -60,7 +60,7 @@ run "bundle exec guard init rspec"
 # ==================================================
 # Use SASS extension for application.css
 run "mv app/assets/stylesheets/application.css app/assets/stylesheets/application.css.scss"
-# Remove the require_tree directives from the sass and JS files. 
+# Remove the require_tree directives from the SASS and JavaScript files. 
 # It's better design to import or require things manually.
 run "sed -i '' /require_tree/d app/assets/javascripts/application.js"
 run "sed -i '' /require_tree/d app/assets/stylesheets/application.css.scss"
@@ -106,13 +106,13 @@ git :init
 git add: "."
 git commit: %Q{ -m 'Initial commit' }
 
-if yes?("Initialize Github repository?")
+if yes?("Initialize GitHub repository?")
   git_uri = `git config remote.origin.url`.strip
   unless git_uri.size == 0
     say "Repository already exists:"
     say "#{git_uri}"
   else
-    username = ask "What is your Github username?"
+    username = ask "What is your GitHub username?"
     run "curl -u #{username} -d '{\"name\":\"#{app_name}\"}' https://api.github.com/user/repos"
     git remote: %Q{ add origin git@github.com:#{username}/#{app_name}.git }
     git push: %Q{ origin master }
