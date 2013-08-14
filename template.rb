@@ -72,13 +72,13 @@ run "echo '@import \"bourbon\";' >>  app/assets/stylesheets/application.css.scss
 
 
 # Bootstrap: install from https://github.com/twbs/bootstrap
-# Note: This is 3.0 RC1, file location may change soon
+# Note: This is 3.0 RC2, file location may change soon
 # ==================================================
 if yes?("Download bootstrap?")
-  run "wget http://getbootstrap.com/bs-v3.0.0-rc1-dist.zip -O bootstrap.zip"
+  run "wget https://github.com/twbs/bootstrap/archive/3.0.0-wip.zip -O bootstrap.zip -O bootstrap.zip"
   run "unzip bootstrap.zip -d bootstrap && rm bootstrap.zip"
-  run "cp bootstrap/dist/css/bootstrap.css vendor/assets/stylesheets/"
-  run "cp bootstrap/dist/js/bootstrap.js vendor/assets/javascripts/"
+  run "cp bootstrap/bootstrap-3.0.0-wip/dist/css/bootstrap.css vendor/assets/stylesheets/"
+  run "cp bootstrap/bootstrap-3.0.0-wip/dist/js/bootstrap.js vendor/assets/javascripts/"
   run "rm -rf bootstrap"
   run "echo '@import \"bootstrap\";' >>  app/assets/stylesheets/application.css.scss"
 end
