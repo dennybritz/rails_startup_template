@@ -2,6 +2,8 @@
 
 This is a template I use for my new Ruby on Rails 4 applications. **Pull requests are welcome.**
 
+Also check out [Startup Readings](https://github.com/dennybritz/startupreadings).
+
 ## How to Use
 
 ```bash
