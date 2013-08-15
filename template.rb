@@ -27,6 +27,7 @@ gem_group :development do
 end
 
 gem_group :test do
+  gem "rspec-rails"
   # Capybara for integration testing (https://github.com/jnicklas/capybara)
   gem "capybara" 
   gem "capybara-webkit"
