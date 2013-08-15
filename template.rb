@@ -8,6 +8,9 @@ gem "bcrypt-ruby"
 # Useful SASS mixins (http://bourbon.io/)
 gem "bourbon"
 
+# For authorization (https://github.com/ryanb/cancan)
+gem "cancan"
+
 # HAML templating language (http://haml.info)
 gem "haml-rails" if yes?("Use HAML instead of ERB?")
 
@@ -51,8 +54,13 @@ run "echo 'STDOUT.sync = true' >> config/environments/development.rb"
 
 # Initialize guard
 # ==================================================
-
 run "bundle exec guard init rspec"
+
+
+
+# Initialize CanCan
+# ==================================================
+run "rails g cancan:ability"
 
 
 
