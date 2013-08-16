@@ -105,7 +105,20 @@ if yes?("Download font-awesome?")
 end
 
 
-# DS_Store gets added to project if viewed in OSX Finder
+# Ignore rails doc files, Vim/Emacs swap files, .DS_Store, and more
+# ===================================================
+run "echo '/.bundle' >> .gitignore"
+run "echo '/db/*.sqlite3' >> .gitignore"
+run "echo '/db/*.sqlite3-journal' >> .gitignore"
+run "echo '/log/*.log' >> .gitignore"
+run "echo '/tmp' >> .gitignore"
+run "echo 'database.yml' >> .gitignore"
+run "echo 'doc/' >> .gitignore"
+run "echo '*.swp' >> .gitignore"
+run "echo '*~' >> .gitignore"
+run "echo '.project' >> .gitignore"
+run "echo '.idea' >> .gitignore"
+run "echo '.secret' >> .gitignore"
 run "echo '.DS_Store' >> .gitignore"
 
 
