@@ -90,6 +90,7 @@ if yes?("Download bootstrap?")
   run "cp bootstrap/bootstrap-3.0.0-wip/dist/js/bootstrap.js vendor/assets/javascripts/"
   run "rm -rf bootstrap"
   run "echo '@import \"bootstrap\";' >>  app/assets/stylesheets/application.css.scss"
+  run "rails g simple_form:install --bootstrap"
 end
 
 
