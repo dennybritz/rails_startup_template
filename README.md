@@ -7,7 +7,7 @@ Also check out [Startup Readings](https://github.com/dennybritz/startupreadings)
 ## How to Use
 
 ```bash
-rails new [app_name] -m rails_startup_template/template.rb
+rails new [app_name] -m https://raw.github.com/dennybritz/rails_startup_template/master/template.rb
 ```
 
 ## What it does
