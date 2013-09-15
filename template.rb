@@ -15,7 +15,7 @@ gem "cancan"
 gem "haml-rails" if yes?("Use HAML instead of ERB?")
 
 # Simple form builder (https://github.com/plataformatec/simple_form)
-gem "simple_form"
+gem "simple_form", git: "https://github.com/plataformatec/simple_form"
 # To generate UUIDs, useful for various things
 gem "uuidtools"
 
