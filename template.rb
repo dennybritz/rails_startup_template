@@ -11,13 +11,14 @@ gem "bourbon"
 # For authorization (https://github.com/ryanb/cancan)
 gem "cancan"
 
-case ask("Choose Template Engine:\n     1) ERB\n     2) HAML\n     3) Slim\n ")
-when ?2
+case ask("Choose Template Engine:", :limited_to => %w[erb haml slim])
+when "haml"
   # HAML templating language (http://haml.info)
   gem "haml-rails"
-when ?3
+when "slim"
   # A lightweight templating engine (http://slim-lang.com)
   gem "slim-rails"
+when "erb"
 end
 
 # Simple form builder (https://github.com/plataformatec/simple_form)
