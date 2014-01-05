@@ -97,10 +97,10 @@ end
 # Font-awesome: Install from http://fortawesome.github.io/Font-Awesome/
 # ==================================================
 if yes?("Download font-awesome?")
-  run "wget http://fortawesome.github.io/Font-Awesome/assets/font-awesome.zip -O font-awesome.zip"
-  run "unzip font-awesome.zip && rm font-awesome.zip"
+  run "wget http://fontawesome.io/assets/font-awesome-4.0.3.zip -O font-awesome.zip"
+  run "unzip font-awesome.zip && rm font-awesome.zip && mv font-awesome-4.0.3 font-awesome"
   run "cp font-awesome/css/font-awesome.css vendor/assets/stylesheets/"
-  run "cp -r font-awesome/font public/font"
+  run "cp -r font-awesome/fonts public/fonts"
   run "rm -rf font-awesome"
   run "echo '@import \"font-awesome\";' >>  app/assets/stylesheets/application.css.scss"
 end
