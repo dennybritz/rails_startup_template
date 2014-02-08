@@ -29,10 +29,11 @@ end
 gem_group :test do
   gem "rspec-rails"
   # Capybara for integration testing (https://github.com/jnicklas/capybara)
-  gem "capybara" 
+  gem "capybara"
   gem "capybara-webkit"
   # FactoryGirl instead of Rails fixtures (https://github.com/thoughtbot/factory_girl)
   gem "factory_girl_rails"
+  gem "database_cleaner"
 end
 
 gem_group :production do
@@ -69,7 +70,7 @@ run "rails g cancan:ability"
 # ==================================================
 # Use SASS extension for application.css
 run "mv app/assets/stylesheets/application.css app/assets/stylesheets/application.css.scss"
-# Remove the require_tree directives from the SASS and JavaScript files. 
+# Remove the require_tree directives from the SASS and JavaScript files.
 # It's better design to import or require things manually.
 run "sed -i '' /require_tree/d app/assets/javascripts/application.js"
 run "sed -i '' /require_tree/d app/assets/stylesheets/application.css.scss"
