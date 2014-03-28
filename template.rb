@@ -11,8 +11,15 @@ gem "bourbon"
 # For authorization (https://github.com/ryanb/cancan)
 gem "cancan"
 
-# HAML templating language (http://haml.info)
-gem "haml-rails" if yes?("Use HAML instead of ERB?")
+case ask("Choose Template Engine:", :limited_to => %w[erb haml slim])
+when "haml"
+  # HAML templating language (http://haml.info)
+  gem "haml-rails"
+when "slim"
+  # A lightweight templating engine (http://slim-lang.com)
+  gem "slim-rails"
+when "erb"
+end
 
 # Simple form builder (https://github.com/plataformatec/simple_form)
 gem "simple_form", git: "https://github.com/plataformatec/simple_form"
